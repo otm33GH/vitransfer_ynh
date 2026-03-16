@@ -78,7 +78,10 @@ ram.runtime = "500M"
         "libgif-dev", 
         "libgif7", 
         "liborc-0.4-dev",
-        "libcjson-dev"
+        "libcjson-dev",
+        "python3", 
+        "python3-pip", 
+        "python3-venv"
     ]
 
     [resources.database]
