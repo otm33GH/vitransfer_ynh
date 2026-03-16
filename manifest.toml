@@ -41,6 +41,8 @@ ram.runtime = "500M"
 
     [install.admin_password]
     type = "password"
+    ask.en = "Choose an admin password"
+    ask.fr = "Choisissez un mot de passe pour l'administrateur"
 
 [resources]
     [resources.sources]
@@ -66,7 +68,6 @@ ram.runtime = "500M"
     [resources.apt]
     packages = [
         "ffmpeg", 
-        "ffmpeg-libs", 
         "fontconfig", 
         "redis-server", 
         "postgresql", 
