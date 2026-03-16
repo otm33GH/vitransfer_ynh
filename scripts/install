@@ -65,7 +65,7 @@ ynh_script_progression "Adding system configurations related to $app..."
 ynh_config_add_nginx
 
 ynh_config_add_systemd --service="$app" --template="vitransfer.service"
-ynh_config_add_systemd --service="$app-worker" --template="worker.service" 
+ynh_config_add_systemd --service="$app-worker" --template="vitransfer-worker.service" 
 
 yunohost service add "$app" --description="ViTransfer" --log="/var/log/$app/$app.log"
 yunohost service add "$app-worker" --description="ViTransfer Worker" --log="/var/log/$app/$app-worker.log"
