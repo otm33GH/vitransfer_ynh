@@ -1,20 +1,19 @@
 #:schema https://raw.githubusercontent.com/YunoHost/apps/main/schemas/manifest.v2.schema.json
 
 packaging_format = 2
-id = "papra"
-name = "Papra"
-description.en = "Document archiving platform"
-description.fr = "Plateforme d'archivage de documents"
-version = "26.2.0~ynh3"
+id = "vitransfer"
+name = "ViTransfer"
+description.en = "Video Sharing"
+description.fr = "Partage de vidéos"
+version = "0.9.6~ynh1"
 
 maintainers = ["otm33GH"]
 
 [upstream]
 license = "GPL-3.0-only"
-website = "https://papra.app/fr/"
-demo = "https://demo.papra.app/"
-admindoc = "https://docs.papra.app/"
-code = "https://github.com/papra-hq/papra"
+website = "https://vitransfer.com"
+admindoc = "https://www.vitransfer.com/docs"
+code = "https://github.com/MansiVisuals/ViTransfer"
 
 [integration]
 yunohost = ">= 12.1.39"
@@ -37,25 +36,11 @@ ram.runtime = "500M"
     type = "group"
     default = "visitors"
 
-    [install.language]
-    ask.en = "Choose the OCR language"
-    ask.fr = "Choisissez la langue pour l'OCR"
-    type = "select"
-    choices = ["fra", "cat", "dan", "deu", "eng", "eus", "fin", "glg", "ita", "nld", "nor", "pol", "port", "ron", "rus", "spa", "slv", "tur", "ukr"]
-    default = "fra"
+    [install.admin]
+    type = "user"
 
-    [install.email_verification]
-    type = "boolean"
-    ask.en = "Allow email verification?"
-    ask.fr = "Activer la confirmation de l'e-mail ?"
-    default = true
-
-    [install.doc_storage_driver]
-    ask.en = "Storage driver"
-    ask.fr = "Storage driver"
-    type = "select"
-    choices = ["filesystem", "s3", "in-memory", "azure-blob"]
-    default = "filesystem"
+    [install.admin_password]
+    type = "password"
 
 [resources]
     [resources.sources]
@@ -78,6 +63,12 @@ ram.runtime = "500M"
 
     [resources.ports]
 
+    [resources.apt]
+    packages = "ffmpeg, redis-server,postgresql"
+
+    [resources.database]
+    type = "postgresql"
+    
     [resources.nodejs]
     version = "24"
     
