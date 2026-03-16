@@ -48,8 +48,8 @@ ram.runtime = "500M"
     [resources.sources]
 
     [resources.sources.main]
-    url = "https://github.com/papra-hq/papra/archive/refs/tags/@papra/app@26.2.1.tar.gz"
-    sha256 = "587cbb0057187922f90c6854e62dc9c04fcdf10e8f92bb9dd20aca0692d0fd83"
+    url = "https://github.com/MansiVisuals/ViTransfer/archive/refs/tags/v0.9.6.tar.gz"
+    sha256 = "5f0e2f52b81de7b4e4a5ec548588c0466733ab0c4058cb49609dc83a11ee38e1"
     autoupdate.strategy = "latest_github_tag"
 
     [resources.system_user]
