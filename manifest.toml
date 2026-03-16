@@ -43,6 +43,7 @@ ram.runtime = "500M"
     type = "password"
     ask.en = "Choose an admin password"
     ask.fr = "Choisissez un mot de passe pour l'administrateur"
+    help = "Avoid special characters in password (!, @, #, etc.) due to JSON parsing"
 
 [resources]
     [resources.sources]
