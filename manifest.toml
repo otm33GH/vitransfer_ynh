@@ -64,7 +64,22 @@ ram.runtime = "500M"
     [resources.ports]
 
     [resources.apt]
-    packages = "ffmpeg, redis-server,postgresql"
+    packages = [
+        "ffmpeg", 
+        "ffmpeg-libs", 
+        "fontconfig", 
+        "redis-server", 
+        "postgresql", 
+        "fonts-dejavu",
+        "ca-certificates",
+        "libssl-dev", 
+        "libsndfile1", 
+        "giflib-tools", 
+        "libgif-dev", 
+        "libgif7", 
+        "liborc-0.4-dev",
+        "libcjson-dev"
+    ]
 
     [resources.database]
     type = "postgresql"
