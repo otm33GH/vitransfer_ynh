@@ -11,10 +11,10 @@ source /usr/share/yunohost/helpers
 #=================================================
 
 max_upload_size=50
-encryption_key=$(openssl rand -base64 32)
-jwt_secret=$(openssl rand -base64 64)
-jwt_refresh_secret=$(openssl rand -base64 64)
-share_token_secret=$(openssl rand -base64 64)
+encryption_key=$(ynh_string_random -l 32)
+jwt_secret=$(ynh_string_random -l 64)
+jwt_refresh_secret=$(ynh_string_random -l 64)
+share_token_secret=$(ynh_string_random -l 64)
 admin_email=$(ynh_user_get_info --username="$admin" --key=mail)
 
 ynh_app_setting_set --key=max_upload_size --value=$max_upload_size
