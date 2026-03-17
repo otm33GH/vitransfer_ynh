@@ -59,7 +59,8 @@ ram.runtime = "500M"
     [resources.install_dir]
 
     [resources.data_dir]
-
+    subdirs = ["uploads"]
+    
     [resources.permissions]
     main.url = "/"
     main.auth_header = false
